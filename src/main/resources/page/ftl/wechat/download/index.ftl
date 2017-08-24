@@ -7,7 +7,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>万友纸牌</title>
+    <title>万友游戏</title>
     <script src="${contextPath}/resources/js/jquery/jquery.min.js"></script>
     <script>
         // 是否是安卓

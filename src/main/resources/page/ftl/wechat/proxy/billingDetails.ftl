@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>嘻哈纸牌</title>
+    <title>万友游戏</title>
     <meta charset="utf-8">
 	<#include "ftl/common/common.ftl"/>
      
