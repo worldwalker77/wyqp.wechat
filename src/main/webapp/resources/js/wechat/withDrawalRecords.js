@@ -43,11 +43,11 @@
 	
 	// 查询按钮点击事件,refresh方法存在bug，无法从第一页开始
 	$('#searchBtn').click(function() {
-		var res = $('#withDrawalRecordListTable').bootstrapTable('getData').length;
+		var res = $('.table.table-striped:eq(0)').bootstrapTable('getData').length;
 		if (res > 0) {
-			$('#withDrawalRecordListTable').bootstrapTable('selectPage', 1);
+			$('.table.table-striped:eq(0)').bootstrapTable('selectPage', 1);
 		} else {
-			$('#withDrawalRecordListTable').bootstrapTable('refresh');
+			$('.table.table-striped:eq(0)').bootstrapTable('refresh');
 		}
 	});
 	

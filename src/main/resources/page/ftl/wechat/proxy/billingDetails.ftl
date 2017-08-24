@@ -8,7 +8,7 @@
   </head>
     
   <body>
-		<div id="crash-container" class="container-fluid">
+		<div id="crash-container" class="container-fluid" style="padding-left:0;padding-right:0;padding-buttom:0">
 		<div class="panel panel-default">
 			<div class="panel-body">
 			

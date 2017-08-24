@@ -34,7 +34,7 @@
 			title: '充值时间'
         }, {
 			field : 'wxPayPrice',
-			title : '充值金额(元)'//,
+			title : '充值金额'//,
 //			formatter : function(value, row, index) {
 //				value = value*0.01;//分到元
 //				value + = '';//转成字符串
@@ -44,7 +44,7 @@
 //			}
 		},{
 			field : 'playerId',
-			title : '玩家游戏ID'
+			title : '游戏ID'
 		}, {
 			field : 'nickName',
 			title : '玩家昵称'
@@ -53,11 +53,11 @@
 	
 	// 查询按钮点击事件,refresh方法存在bug，无法从第一页开始
 	$('#searchBtn').click(function() {
-		var res = $('#billingDetailsTable').bootstrapTable('getData').length;
+		var res = $('.table.table-striped:eq(0)').bootstrapTable('getData').length;
 		if (res > 0) {
-			$('#billingDetailsTable').bootstrapTable('selectPage', 1);
+			$('.table.table-striped:eq(0)').bootstrapTable('selectPage', 1);
 		} else {
-			$('#billingDetailsTable').bootstrapTable('refresh');
+			$('.table.table-striped:eq(0)').bootstrapTable('refresh');
 		}
 	});
 	

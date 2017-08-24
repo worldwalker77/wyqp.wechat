@@ -94,7 +94,7 @@
 	    from t_proxy_user a
 	    left join t_order b
 	    on a.player_id = b.player_id
-	    where a.proxy_id = #{proxyId} and <![CDATA[ b.create_time >= #{startDate} and b.create_time <= #{endDate} ]]>
+	    where a.proxy_id = #{proxyId} and b.pay_status = 1 and <![CDATA[ b.create_time >= #{startDate} and b.create_time <= #{endDate} ]]>
 	</select>
 	
 	<select id="getWithDrawalRecords"  parameterType = "gameQuery" resultMap="gameModelResultMap">

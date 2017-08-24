@@ -43,11 +43,11 @@
 	
 	// 查询按钮点击事件,refresh方法存在bug，无法从第一页开始
 	$('#searchBtn').click(function() {
-		var res = $('#myMembersListTable').bootstrapTable('getData').length;
+		var res = $('.table.table-striped:eq(0)').bootstrapTable('getData').length;
 		if (res > 0) {
-			$('#myMembersListTable').bootstrapTable('selectPage', 1);
+			$('.table.table-striped:eq(0)').bootstrapTable('selectPage', 1);
 		} else {
-			$('#myMembersListTable').bootstrapTable('refresh');
+			$('.table.table-striped:eq(0)').bootstrapTable('refresh');
 		}
 	});
 	

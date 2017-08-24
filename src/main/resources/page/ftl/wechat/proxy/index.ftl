@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>嘻哈纸牌</title>
+    <title>瑞星纸牌</title>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,16 +18,16 @@
 		
 		<div class="weui-tab">
 	      <div class="weui-tab__bd">
-	        <div id="tab1" class="weui-tab__bd-item">
+	        <div id="tab1" class="weui-tab__bd-item" style="-webkit-overflow-scrolling:touch; overflow: scroll;">
 	          <iframe style='width:100%;height:90%' scrolling="yes" frameborder="0" src="/game/proxy/billingDetails"></iframe>
 	        </div>
-	        <div id="tab2" class="weui-tab__bd-item">
+	        <div id="tab2" class="weui-tab__bd-item" style="-webkit-overflow-scrolling:touch; overflow: scroll;">
 	          <iframe style='width:100%;height:90%' scrolling="yes" frameborder="0" src="/game/proxy/myMembers"></iframe>
 	        </div>
-	        <div id="tab3" class="weui-tab__bd-item">
+	        <div id="tab3" class="weui-tab__bd-item" style="-webkit-overflow-scrolling:touch; overflow: scroll;">
 	          <iframe style='width:100%;height:90%' scrolling="yes" frameborder="0" src="/game/proxy/withDrawalRecords"></iframe>
 	        </div>
-	        <div id="tab4" class="weui-tab__bd-item weui-tab__bd-item--active">
+	        <div id="tab4" class="weui-tab__bd-item weui-tab__bd-item--active" style="-webkit-overflow-scrolling:touch; overflow: scroll;">
 	          <iframe style='width:100%;height:90%' scrolling="yes" frameborder="0" src="/game/proxy/proxyInfo"></iframe>
 	        </div>
 	      </div>
