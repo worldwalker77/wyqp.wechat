@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import cn.worldwalker.game.wyqp.wechat.common.utils.DateUtil;
 import cn.worldwalker.game.wyqp.wechat.common.utils.RequestUtil;
+import cn.worldwalker.game.wyqp.wechat.domain.GameModel;
 import cn.worldwalker.game.wyqp.wechat.domain.GameQuery;
 import cn.worldwalker.game.wyqp.wechat.domain.Result;
 import cn.worldwalker.game.wyqp.wechat.service.GameService;
@@ -50,8 +51,25 @@ public class GameController {
 		mv.addObject("nickName", RequestUtil.getUserSession().getNickName());
 		mv.addObject("mobilePhone", RequestUtil.getUserSession().getMobilePhone());
 		mv.addObject("wechatNum", RequestUtil.getUserSession().getWechatNum());
+		GameQuery gameQuery = new GameQuery();
+		gameQuery.setProxyId(RequestUtil.getProxyId());
+		Result result = gameService.getProxyInfo(gameQuery);
+		if (result.getCode() == 0) {
+			GameModel gameModel = (GameModel)result.getData();
+			mv.addObject("totalIncome", gameModel.getTotalIncome());
+			mv.addObject("extractAmount", gameModel.getExtractAmount());
+			mv.addObject("remainderAmount", gameModel.getRemainderAmount());
+		}
 		mv.setViewName("wechat/proxy/proxyInfo");
 		return mv;
+	}
+	
+	@RequestMapping("proxy/getProxyInfo")
+	@ResponseBody
+	public Result getProxyInfo(){
+		GameQuery gameQuery = new GameQuery();
+		gameQuery.setProxyId(RequestUtil.getProxyId());
+		return gameService.getProxyInfo(gameQuery);
 	}
 	
 	@RequestMapping("proxy/billingDetails")

@@ -5,14 +5,14 @@ import cn.worldwalker.game.wyqp.wechat.domain.Result;
 
 public interface GameService {
 	
-	public Result doLogin(GameQuery proxyQuery);
+	public Result doLogin(GameQuery gameQuery);
 	
-	public Result getProxyInfo(GameQuery proxyQuery);
+	public Result getProxyInfo(GameQuery gameQuery);
 	
-	public Result getBillingDetails(GameQuery proxyQuery);
+	public Result getBillingDetails(GameQuery gameQuery);
 	
-	public Result getMyMembers(GameQuery proxyQuery);
+	public Result getMyMembers(GameQuery gameQuery);
 	
-	public Result getWithDrawalRecords(GameQuery proxyQuery);
+	public Result getWithDrawalRecords(GameQuery gameQuery);
 	
 }

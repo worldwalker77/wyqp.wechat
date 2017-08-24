@@ -22,11 +22,11 @@ public class GameModel {
 	/**提现金额*/
 	private double withdrawalAmount;
 	/**总提成*/
-	private Long extractAmount;
+	private String extractAmount;
 	/**账户余额*/
-	private Long remainderAmount;
+	private String remainderAmount;
 	/**累计收益*/
-	private Long totalIncome;
+	private String totalIncome;
 	/**密码*/
 	private String password;
 	
@@ -57,18 +57,6 @@ public class GameModel {
 	}
 	public void setWechatNum(String wechatNum) {
 		this.wechatNum = wechatNum;
-	}
-	public Long getExtractAmount() {
-		return extractAmount;
-	}
-	public void setExtractAmount(Long extractAmount) {
-		this.extractAmount = extractAmount;
-	}
-	public Long getRemainderAmount() {
-		return remainderAmount;
-	}
-	public void setRemainderAmount(Long remainderAmount) {
-		this.remainderAmount = remainderAmount;
 	}
 	public Integer getProxyId() {
 		return proxyId;
@@ -118,11 +106,32 @@ public class GameModel {
 	public void setWxPayPrice(String wxPayPrice) {
 		this.wxPayPrice = wxPayPrice;
 	}
-	public Long getTotalIncome() {
-		return totalIncome;
+	public String getTotalIncome() {
+		if (StringUtils.isEmpty(totalIncome)) {
+			return null;
+		}
+		return BigDecimal.valueOf(Long.valueOf(totalIncome)).divide(new BigDecimal(100)).toString();
 	}
-	public void setTotalIncome(Long totalIncome) {
+	public void setTotalIncome(String totalIncome) {
 		this.totalIncome = totalIncome;
+	}
+	public String getExtractAmount() {
+		if (StringUtils.isEmpty(extractAmount)) {
+			return null;
+		}
+		return BigDecimal.valueOf(Long.valueOf(extractAmount)).divide(new BigDecimal(100)).toString();
+	}
+	public void setExtractAmount(String extractAmount) {
+		this.extractAmount = extractAmount;
+	}
+	public String getRemainderAmount() {
+		if (StringUtils.isEmpty(remainderAmount)) {
+			return null;
+		}
+		return BigDecimal.valueOf(Long.valueOf(remainderAmount)).divide(new BigDecimal(100)).toString();
+	}
+	public void setRemainderAmount(String remainderAmount) {
+		this.remainderAmount = remainderAmount;
 	}
 	
 }

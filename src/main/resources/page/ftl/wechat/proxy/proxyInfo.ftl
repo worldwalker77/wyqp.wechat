@@ -53,6 +53,34 @@
 		    <div class="weui-cell__ft">${wechatNum}</div>
 		  </div>
 		</div>
+		
+		
+		<div class="weui-cells">
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><img src=""></div>
+		    <div class="weui-cell__bd">
+		      <p>累计收益(元)</p>
+		    </div>
+		    <div class="weui-cell__ft">${totalIncome}</div>
+		  </div>
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><img src=""></div>
+		    <div class="weui-cell__bd">
+		      <p>已提现金额(元)</p>
+		    </div>
+		    <div class="weui-cell__ft">${extractAmount}</div>
+		  </div>
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><img src=""></div>
+		    <div class="weui-cell__bd">
+		      <p>账户余额(元)</p>
+		    </div>
+		    <div class="weui-cell__ft">${remainderAmount}</div>
+		  </div>
+		  
+		</div>
+		
+		
 		<script src="/resources/jquery-weui-build/lib/jquery-2.1.4.js"></script>
 		<script src="/resources/jquery-weui-build/lib/fastclick.js"></script>
 		<script>

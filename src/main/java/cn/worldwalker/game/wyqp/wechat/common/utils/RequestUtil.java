@@ -49,6 +49,14 @@ public class RequestUtil {
 		return sessionThreadLocal.get();
 	}
 	
+	public static Integer getProxyId(){
+		UserSession us = sessionThreadLocal.get();
+		if (us == null) {
+			return null;
+		}
+		return us.getProxyId();
+	}
+	
 	/**
 	 * 获取请求id，每个请求都会有一个id与之对应，再跨多个系统的复杂应用时，可以很方便的定位问题
 	 * @return

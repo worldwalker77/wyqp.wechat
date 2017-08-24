@@ -56,7 +56,7 @@
     </insert>
     
 	<select id="getProxyInfo"  parameterType = "gameQuery" resultMap="gameModelResultMap">
-	    select proxy_id, player_id, nick_name , mobile_phone, wechat_num
+	    select total_income, extract_amount, remainder_amount
 	    from t_proxy
 	    where proxy_id = #{proxyId}
 	</select>
