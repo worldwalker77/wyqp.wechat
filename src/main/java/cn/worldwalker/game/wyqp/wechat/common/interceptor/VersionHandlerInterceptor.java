@@ -9,8 +9,8 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  * 
  * @ClassName: VersionHandlerInterceptor    
  * @Description:将页面要访问的静态变量设置到视图中
- * @author: jian.cheng    
- * @date: 2016年10月23日 下午4:42:29    
+ * @author: jinfeng    
+ * @date: 
  * @version: V1.0
  */
 public class VersionHandlerInterceptor extends HandlerInterceptorAdapter {
