@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)http://mcdown.xixiqipai.com/ -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,8 +6,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>万友游戏</title>
-    <script src="${contextPath}/resources/js/jquery/jquery.min.js"></script>
+    <title>嘻哈纸牌</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script>
         // 是否是安卓
         function isAndroid() {
@@ -118,10 +117,10 @@
             </a>
             <!-- pc下载链接  sdfsd -->
             <a class="hp-download-download" href="http://fir.im/3z1x">
-                <img id="download-pc" class="common-center common-pc hp-download-btn" src="/resources/img/anzhuo_down.png">
+                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/anzhuo_down.png">
             </a>
             <a class="hp-download-download" href="http://fir.im/rzba">
-                <img id="download-pc" class="common-center common-pc hp-download-btn" src="/resources/img/ios_down.png">
+                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/ios_down.png">
             </a>
         </div>
     </div>

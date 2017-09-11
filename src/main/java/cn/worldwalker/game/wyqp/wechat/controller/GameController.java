@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import cn.worldwalker.game.wyqp.wechat.common.utils.CustomizedPropertyConfigurer;
 import cn.worldwalker.game.wyqp.wechat.common.utils.DateUtil;
 import cn.worldwalker.game.wyqp.wechat.common.utils.RequestUtil;
 import cn.worldwalker.game.wyqp.wechat.domain.GameModel;
@@ -19,27 +20,28 @@ import cn.worldwalker.game.wyqp.wechat.service.GameService;
 @Controller
 @RequestMapping("game/")
 public class GameController {
+	private final static String CUR_COMPANY = CustomizedPropertyConfigurer.getContextProperty("cur.company");
 	@Autowired
 	private GameService gameService;
 	
 	@RequestMapping("company/index")
 	public ModelAndView gamePlayIndex(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/company/index");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/company/index");
 		return mv;
 	}
 	
 	@RequestMapping("download/index")
 	public ModelAndView gameMallIndex(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/download/index");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/download/index");
 		return mv;
 	}
 	
 	@RequestMapping("proxy/index")
 	public ModelAndView gameProxyIndex(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/proxy/index");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/proxy/index");
 		return mv;
 	}
 	
@@ -60,7 +62,7 @@ public class GameController {
 			mv.addObject("extractAmount", gameModel.getExtractAmount());
 			mv.addObject("remainderAmount", gameModel.getRemainderAmount());
 		}
-		mv.setViewName("wechat/proxy/proxyInfo");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/proxy/proxyInfo");
 		return mv;
 	}
 	
@@ -75,7 +77,7 @@ public class GameController {
 	@RequestMapping("proxy/billingDetails")
 	public ModelAndView gameProxyBillingDetails(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/proxy/billingDetails");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/proxy/billingDetails");
 		Date endDate = new Date();
 		Date startDate = DateUtil.getNDayBefore(endDate, 30);
 		mv.addObject("startDate", DateUtil.getDateFormat(startDate));
@@ -91,7 +93,7 @@ public class GameController {
 	@RequestMapping("proxy/myMembers")
 	public ModelAndView gameProxyMyMembers(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/proxy/myMembers");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/proxy/myMembers");
 		Date endDate = new Date();
 		Date startDate = DateUtil.getNDayBefore(endDate, 30);
 		mv.addObject("startDate", DateUtil.getDateFormat(startDate));
@@ -107,7 +109,7 @@ public class GameController {
 	@RequestMapping("proxy/withDrawalRecords")
 	public ModelAndView gameWithDrawalRecords(){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("wechat/proxy/withDrawalRecords");
+		mv.setViewName("wechat/" + CUR_COMPANY + "/proxy/withDrawalRecords");
 		Date endDate = new Date();
 		Date startDate = DateUtil.getNDayBefore(endDate, 30);
 		mv.addObject("startDate", DateUtil.getDateFormat(startDate));
