@@ -96,39 +96,39 @@
     </style>
 </head>
 <body>
-    <div><img src="/resources/img/ga_01.jpg" class="wimg" /></div>
-    <div><img src="/resources/img/ga_02.jpg" class="wimg" /></div>
+    <div><img src="/resources/img/wyqp/ga_01.jpg" class="wimg" /></div>
+    <div><img src="/resources/img/wyqp/ga_02.jpg" class="wimg" /></div>
     <div class="btn_op">
-        <img src="/resources/img/ga_03.jpg" class="wimg" />
+        <img src="/resources/img/wyqp/ga_03.jpg" class="wimg" />
         <div class="btn_download_box">
             <!-- android下载链接 -->
             <a class="common-android hp-download-download common-hide" href="http://fir.im/3z1x">
-                <img id="download-android" class="common-center hp-download-btn" src="/resources/img/anzhuo_down.png">
+                <img id="download-android" class="common-center hp-download-btn" src="/resources/img/wyqp/anzhuo_down.png">
             </a>
             <a class="common-android hp-download-download common-hide" href="http://fir.im/rzba">
-                <img id="download-ios" class="common-center hp-download-btn" src="/resources/img/ios_down1.png">
+                <img id="download-ios" class="common-center hp-download-btn" src="/resources/img/wyqp/ios_down1.png">
             </a>
             <!-- ios下载链接 -->
             <a class="common-ios hp-download-download common-hide" href="http://fir.im/rzba">
-                <img id="download-ios" class="common-center hp-download-btn" src="/resources/img/ios_down.png">
+                <img id="download-ios" class="common-center hp-download-btn" src="/resources/img/wyqp/ios_down.png">
             </a>
             <a class="common-ios hp-download-download common-hide" href="http://fir.im/rzba">
-                <img id="download-android" class="common-center hp-download-btn" src="/resources/img/anzhuo_down1.png">
+                <img id="download-android" class="common-center hp-download-btn" src="/resources/img/wyqp/anzhuo_down1.png">
             </a>
             <!-- pc下载链接  sdfsd -->
             <a class="hp-download-download" href="http://fir.im/3z1x">
-                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/anzhuo_down.png">
+                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/wyqp/anzhuo_down.png">
             </a>
             <a class="hp-download-download" href="http://fir.im/rzba">
-                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/ios_down.png">
+                <img id="download-pc" class="common-center common-pc hp-download-btn common-hide" src="/resources/img/wyqp/ios_down.png">
             </a>
         </div>
     </div>
-    <div><img src="/resources/img/ga_04.jpg" class="wimg" /></div>
-    <div><img src="/resources/img/ga_05.jpg" class="wimg" /></div>
+    <div><img src="/resources/img/wyqp/ga_04.jpg" class="wimg" /></div>
+    <div><img src="/resources/img/wyqp/ga_05.jpg" class="wimg" /></div>
     <section id="mask" class="common-hide hp-mask">
         <div class="hp-mask-background"></div>
-        <img class="hp-mask-instruction" src="/resources/img/instruction.png">
+        <img class="hp-mask-instruction" src="/resources/img/wyqp/instruction.png">
     </section>
     <div align="center"><!--<a href="http://www.cnzz.com/stat/website.php?web_id=2688391" target="_blank" title="站长统计">站长统计</a>--></div>
     <div id="cli_dialog_div"></div>
