@@ -22,7 +22,7 @@
 						<div class="pull-right">
 							<div class="col-xs-1">
 								<button type="reset" class="btn btn-sm btn-primary" id="resetBtn">
-									<i class="glyphicon glyphicon-remove"></i>清空
+									<i></i>清空
 								</button>
 							</div>
 						</div>
@@ -39,7 +39,7 @@
 						<div class="pull-right">
 							<div class="col-xs-1">
 								<button type="button" class="btn btn-sm btn-primary " id="searchBtn">
-									<i class="glyphicon glyphicon-search"></i>查询
+									<i></i>查询
 								</button>
 							</div>
 						</div>
