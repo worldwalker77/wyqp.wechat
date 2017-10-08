@@ -20,6 +20,7 @@
 		<result column="password" property="password"/>
 		<result column="wx_pay_price" property="wxPayPrice"/>
 		<result column="create_time" property="createTime"/>
+		<result column="room_card_num" property="roomCardNum"/>
 	</resultMap>
 	
 	
@@ -115,6 +116,19 @@
 	    from t_proxy
 	    where mobile_phone = #{mobilePhone} and password = #{password}
 	</select>
+	
+	
+	<select id="getUserByCondition"  parameterType = "gameQuery" resultMap="gameModelResultMap">
+	    select player_id,nick_name, room_card_num
+	    from t_user
+	    where player_id = #{playerId}
+	</select>
+	
+	<update id="updateRoomCardNumByPlayerId"  parameterType = "gameQuery">
+	    update t_user
+	    set room_card_num = room_card_num + #{changeRoomCardNum}
+	    where player_id = #{playerId} and room_card_num = #{roomCardNum}
+	</update>
 
 </mapper>
 

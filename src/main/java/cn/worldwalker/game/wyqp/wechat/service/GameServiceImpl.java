@@ -7,6 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import cn.worldwalker.game.wyqp.wechat.common.exception.BusinessException;
+import cn.worldwalker.game.wyqp.wechat.common.exception.ExceptionEnum;
 import cn.worldwalker.game.wyqp.wechat.common.utils.MD5Util;
 import cn.worldwalker.game.wyqp.wechat.common.utils.RequestUtil;
 import cn.worldwalker.game.wyqp.wechat.dao.GameDao;
@@ -14,12 +16,15 @@ import cn.worldwalker.game.wyqp.wechat.domain.GameModel;
 import cn.worldwalker.game.wyqp.wechat.domain.GameQuery;
 import cn.worldwalker.game.wyqp.wechat.domain.Result;
 import cn.worldwalker.game.wyqp.wechat.domain.UserSession;
+import cn.worldwalker.game.wyqp.wechat.manager.GameManager;
 
 @Service
 public class GameServiceImpl implements GameService{
 	
 	@Autowired
 	private GameDao gameDao;
+	@Autowired
+	private GameManager gameManager;
 	
 	@Override
 	public Result doLogin(GameQuery gameQuery) {
@@ -134,6 +139,29 @@ public class GameServiceImpl implements GameService{
 		map.put("total", total);
 		map.put("rows", list);
 		result.setData(map);
+		return result;
+	}
+	@Override
+	public Result getUserByPlayerId(Integer playerId) {
+		GameQuery gameQuery = new GameQuery();
+		gameQuery.setPlayerId(playerId);
+		GameModel model = gameDao.getUserByCondition(gameQuery);
+		Result result = new Result();
+		result.setData(model);
+		return result;
+	}
+	@Override
+	public Result doGiveAwayRoomCards(Integer toPlayerId, Integer roomCardNum) {
+		Result result = new Result();
+		try {
+			gameManager.giveAwayRoomCards(toPlayerId, roomCardNum);
+		} catch (BusinessException e) {
+			result.setCode(e.code);
+			result.setDesc(e.desc);
+		} catch (Exception e) {
+			result.setCode(ExceptionEnum.SYSTEM_ERROR.code);
+			result.setDesc(ExceptionEnum.SYSTEM_ERROR.desc);
+		}
 		return result;
 	}
 

@@ -122,4 +122,28 @@ public class GameController {
 	public Result getWithDrawalRecords(@RequestBody GameQuery gameQuery){
 		return gameService.getWithDrawalRecords(gameQuery);
 	}
+	
+	
+	/**
+	 * 赠送房卡页面
+	 * @return
+	 */
+	@RequestMapping("proxy/giveAwayRoomCards")
+	public ModelAndView giveAwayRoomCards(){
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("wechat/proxy/giveAwayRoomCards");
+		return mv;
+	}
+	
+	@RequestMapping("proxy/doGiveAwayRoomCards")
+	@ResponseBody
+	public Result doGiveAwayRoomCards(Integer toPlayerId, Integer roomCardNum){
+		return gameService.doGiveAwayRoomCards(toPlayerId, roomCardNum);
+	}
+	
+	@RequestMapping("proxy/getUserByPlayerId")
+	@ResponseBody
+	public Result getUserByPlayerId(Integer playerId){
+		return gameService.getUserByPlayerId(playerId);
+	}
 }

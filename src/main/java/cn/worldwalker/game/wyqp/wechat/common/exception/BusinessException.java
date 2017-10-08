@@ -7,8 +7,8 @@ package cn.worldwalker.game.wyqp.wechat.common.exception;
  */
 public class BusinessException extends RuntimeException {
     private static final long serialVersionUID = 6511369321028049305L;
-    protected Integer          code;
-    protected String          desc;
+    public Integer          code;
+    public String          desc;
     
     public BusinessException(String desc) {
         this.desc = desc;

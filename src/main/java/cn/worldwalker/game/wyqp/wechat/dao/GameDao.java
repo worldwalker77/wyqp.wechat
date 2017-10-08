@@ -20,5 +20,9 @@ public interface GameDao {
 	
 	public GameModel getProxyByPhoneAndPassword(GameQuery gameQuery);
 	
+	public GameModel getUserByCondition(GameQuery gameQuery);
+	
+	public Integer updateRoomCardNumByPlayerId(GameQuery gameQuery);
+	
 	
 }

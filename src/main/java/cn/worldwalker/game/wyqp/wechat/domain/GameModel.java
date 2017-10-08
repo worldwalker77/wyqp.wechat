@@ -34,6 +34,8 @@ public class GameModel {
 	/**时间*/
 	private String createTime;
 	
+	private Integer roomCardNum;
+	
 	public Integer getPlayerId() {
 		return playerId;
 	}
@@ -132,6 +134,12 @@ public class GameModel {
 	}
 	public void setRemainderAmount(String remainderAmount) {
 		this.remainderAmount = remainderAmount;
+	}
+	public Integer getRoomCardNum() {
+		return roomCardNum;
+	}
+	public void setRoomCardNum(Integer roomCardNum) {
+		this.roomCardNum = roomCardNum;
 	}
 	
 }

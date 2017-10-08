@@ -77,7 +77,12 @@
 		    </div>
 		    <div class="weui-cell__ft">${remainderAmount}</div>
 		  </div>
-		  
+		  <div class="weui-cell">
+		    <div class="weui-cell__hd"><img src=""></div>
+		    <div class="weui-cell__bd">
+		      <a href='/game/proxy/giveAwayRoomCards'>赠送房卡</a>
+		    </div>
+		  </div>
 		</div>
 		
 		

@@ -15,4 +15,8 @@ public interface GameService {
 	
 	public Result getWithDrawalRecords(GameQuery gameQuery);
 	
+	public Result getUserByPlayerId(Integer playerId);
+	
+	public Result doGiveAwayRoomCards(Integer toPlayerId, Integer roomCardNum);
+	
 }

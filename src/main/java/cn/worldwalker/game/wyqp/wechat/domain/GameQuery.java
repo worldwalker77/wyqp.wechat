@@ -2,6 +2,7 @@ package cn.worldwalker.game.wyqp.wechat.domain;
 
 public class GameQuery {
 	private Integer proxyId;
+	private Integer playerId;
 	private String startDate;
 	private String endDate;
 	private long offset;
@@ -9,6 +10,8 @@ public class GameQuery {
 	
 	private String mobilePhone;
 	private String password;
+	private Integer changeRoomCardNum;
+	private Integer roomCardNum;
 	public String getStartDate() {
 		return startDate;
 	}
@@ -50,6 +53,24 @@ public class GameQuery {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Integer getPlayerId() {
+		return playerId;
+	}
+	public void setPlayerId(Integer playerId) {
+		this.playerId = playerId;
+	}
+	public Integer getChangeRoomCardNum() {
+		return changeRoomCardNum;
+	}
+	public void setChangeRoomCardNum(Integer changeRoomCardNum) {
+		this.changeRoomCardNum = changeRoomCardNum;
+	}
+	public Integer getRoomCardNum() {
+		return roomCardNum;
+	}
+	public void setRoomCardNum(Integer roomCardNum) {
+		this.roomCardNum = roomCardNum;
 	}
 	
 }
